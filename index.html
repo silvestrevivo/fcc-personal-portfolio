@@ -10,8 +10,47 @@
 </head>
 
 <body>
-    <h1>Personal portfolio</h1>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li class="link-nav"><a href="#welcome-section">about</a></li>
+                <li class="link-nav"><a href="#projects">work</a></li>
+                <li class="link-nav"><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="welcome-section">
+            <div>
+                <h1>Hey, I am Silvestre</h1>
+                <h2>a web developer</h2>
+            </div>
+        </div>
+        <section id="projects">
+            <h2>Projects</h2>
+        </section>
+        <section id="contact">
+            <h2>contact</h2>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-contact-fcc/v1/bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('a[href^="#"]').bind('click.smoothscroll', function (e) {
+                e.preventDefault();
+                var target = this.hash,
+                    $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 40
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
