@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 </head>
 
 <body>
@@ -30,11 +31,38 @@
             <h2>Projects</h2>
         </section>
         <section id="contact">
-            <h2>contact</h2>
+            <div class="content">
+                <h4>Let's work together...</h4>
+                <h5>How do you take a coffee?</h5>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://facebook.com/freecodecamp" target="_blank"><i
+                                class="fab fa-facebook"></i>Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/freecodecamp" target="_blank" id="profile-link"><i
+                                class="fab fa-github"></i>Github</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/freecodecamp" target="_blank"><i
+                                class="fab fa-twitter"></i>Twitter</a>
+                    </li>
+                    <li>
+                        <a href="mailto:YourName@YourSite.com"><i class="fas fa-envelope"></i>Send a mail</a>
+                    </li>
+                    <li>
+                        <a href="tel:555-555-1212"><i class="fas fa-mobile"></i>Call me</a>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
-    <script src="https://cdn.freecodecamp.org/testable-contact-fcc/v1/bundle.js"></script>
+    <footer>
+        <p>This is just a fake portfolio. All the projects and contact details given are not real.</p>
+        <p>&#9400; Created for freeCodeCamp</p>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script>
         jQuery(document).ready(function ($) {
             $('a[href^="#"]').bind('click.smoothscroll', function (e) {

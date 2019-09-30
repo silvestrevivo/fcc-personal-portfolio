@@ -6,6 +6,7 @@ html, body {
 
 body {
   box-sizing: border-box;
+  position: relative;
 }
 
 *,
@@ -93,7 +94,7 @@ header{
   height: 100vh;
   background: #18634c;
   position: relative;
-  background: linear-gradient(-45deg,#4290b4 9%,#da3c1c 25%,#eb7867 45%,#ed8775 62%,#ef9081 72%,#f2a79c 78%,#f9d2cf);
+  background: linear-gradient(-45deg,#006680 9%,#da3c1c 25%,#eb7867 45%,#ed8775 62%,#ef9081 72%,#f2a79c 78%,#f9d2cf);
 }
 
 #welcome-section div{
@@ -122,6 +123,77 @@ header{
 }
 
 #contact{
-  height: 50vh;
-  border: 1px dashed blue;
+  height: calc(100vh - 60px);
+  background-color: #eb7867;
+  position: relative;
+}
+
+#contact .content{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+  color: #e6e6e6;
+}
+
+#contact h4 {
+  font-size: 45px;
+}
+
+#contact h5 {
+  font-size: 25px;
+  color: #006680;
+  font-weight: normal;
+}
+
+#contact ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+#contact ul li {
+  margin: 0 10px;
+  transition: all .2s ease;
+}
+
+#contact ul li:hover{
+  transform: translateY(5px);
+  color: white;
+}
+
+#contact ul li i {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #contact ul {
+    display: block;
+  }
+  #contact ul li {
+    margin: 20px 10px;
+  }
+}
+
+footer{
+  background-color: #eb7867;
+  border-top: 5px solid #006680;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 45px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer{
+    display: block;
+    font-size: 10px;
+    text-align: center;
+  }
 }
