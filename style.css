@@ -90,6 +90,7 @@ header{
   color: #d1d1d1;
 }
 
+/* wellcome-header */
 #welcome-section{
   height: 100vh;
   background: #18634c;
@@ -116,12 +117,53 @@ header{
   font-weight: lighter;
 }
 
-
+/* Projects */
 #projects{
-  height: 100vh;
-  border: 1px dashed blue;
+  min-height: 100vh;
+  padding: 60px 30px;
+  background-color: #2c2c2c;
 }
 
+#projects h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 45px;
+  color: #e6e6e6;
+  padding-bottom: 25px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-container .project {
+  border: 1px solid #e6e6e6;
+}
+
+.projects-container .project:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  padding-bottom: calc(1/1 * 100%);
+}
+
+h3.project-tile{
+  background-color: #006680;
+  font-size: 25px;
+  padding: 8px 16px;
+  color: #e6e6e6;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* Contact */
 #contact{
   height: calc(100vh - 60px);
   background-color: #eb7867;
@@ -153,6 +195,9 @@ header{
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #contact ul li {
@@ -178,6 +223,7 @@ header{
   }
 }
 
+/* Footer */
 footer{
   background-color: #eb7867;
   border-top: 5px solid #006680;

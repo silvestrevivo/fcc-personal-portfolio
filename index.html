@@ -1,84 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="navbar">
-            <ul>
-                <li class="link-nav"><a href="#welcome-section">about</a></li>
-                <li class="link-nav"><a href="#projects">work</a></li>
-                <li class="link-nav"><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
+      <nav id="navbar">
+        <ul>
+          <li class="link-nav"><a href="#welcome-section">about</a></li>
+          <li class="link-nav"><a href="#projects">work</a></li>
+          <li class="link-nav"><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="welcome-section">
-            <div>
-                <h1>Hey, I am Silvestre</h1>
-                <h2>a web developer</h2>
-            </div>
+      <div id="welcome-section">
+        <div>
+          <h1>Hey, I am Silvestre</h1>
+          <h2>a web developer</h2>
         </div>
-        <section id="projects">
-            <h2>Projects</h2>
-        </section>
-        <section id="contact">
-            <div class="content">
-                <h4>Let's work together...</h4>
-                <h5>How do you take a coffee?</h5>
-                <ul class="social-media">
-                    <li>
-                        <a href="https://facebook.com/freecodecamp" target="_blank"><i
-                                class="fab fa-facebook"></i>Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/freecodecamp" target="_blank" id="profile-link"><i
-                                class="fab fa-github"></i>Github</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/freecodecamp" target="_blank"><i
-                                class="fab fa-twitter"></i>Twitter</a>
-                    </li>
-                    <li>
-                        <a href="mailto:YourName@YourSite.com"><i class="fas fa-envelope"></i>Send a mail</a>
-                    </li>
-                    <li>
-                        <a href="tel:555-555-1212"><i class="fas fa-mobile"></i>Call me</a>
-                    </li>
-                </ul>
+      </div>
+      <section id="projects">
+        <h2>These are some of my projects</h2>
+        <div class="projects-container">
+          <a href="#">
+            <div class="project">
+              <img src="" alt="" />
+              <h3 class="project-tile">Project title</h3>
             </div>
-        </section>
+          </a>
+          <div class="project">
+            <img src="" alt="" />
+            <h3 class="project-tile">Project title</h3>
+          </div>
+          <div class="project">
+            <img src="" alt="" />
+            <h3 class="project-tile">Project title</h3>
+          </div>
+          <div class="project">
+            <img src="" alt="" />
+            <h3 class="project-tile">Project title</h3>
+          </div>
+          <div class="project">
+            <img src="" alt="" />
+            <h3 class="project-tile">Project title</h3>
+          </div>
+          <div class="project">
+            <img src="" alt="" />
+            <h3 class="project-tile">Project title</h3>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="content">
+          <h4>Let's work together...</h4>
+          <h5>How do you take a coffee?</h5>
+          <ul class="social-media">
+            <li>
+              <a href="https://facebook.com/freecodecamp" target="_blank"
+                ><i class="fab fa-facebook"></i>Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/freecodecamp"
+                target="_blank"
+                id="profile-link"
+                ><i class="fab fa-github"></i>Github</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/freecodecamp" target="_blank"
+                ><i class="fab fa-twitter"></i>Twitter</a
+              >
+            </li>
+            <li>
+              <a href="mailto:YourName@YourSite.com"
+                ><i class="fas fa-envelope"></i>Send a mail</a
+              >
+            </li>
+            <li>
+              <a href="tel:555-555-1212"
+                ><i class="fas fa-mobile"></i>Call me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>This is just a fake portfolio. All the projects and contact details given are not real.</p>
-        <p>&#9400; Created for freeCodeCamp</p>
+      <p>
+        This is just a fake portfolio. All the projects and contact details
+        given are not real.
+      </p>
+      <p>&#9400; Created for freeCodeCamp</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script>
-        jQuery(document).ready(function ($) {
-            $('a[href^="#"]').bind('click.smoothscroll', function (e) {
-                e.preventDefault();
-                var target = this.hash,
-                    $target = $(target);
+      jQuery(document).ready(function($) {
+        $('a[href^="#"]').bind("click.smoothscroll", function(e) {
+          e.preventDefault();
+          var target = this.hash,
+            $target = $(target);
 
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top - 40
-                }, 900, 'swing', function () {
-                    window.location.hash = target;
-                });
-            });
+          $("html, body")
+            .stop()
+            .animate(
+              {
+                scrollTop: $target.offset().top - 40
+              },
+              900,
+              "swing",
+              function() {
+                window.location.hash = target;
+              }
+            );
         });
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
